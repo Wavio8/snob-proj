@@ -1,0 +1,70 @@
+$font-family-main: "PF Beau Sans Pro", Arial, Helvetica, sans-serif;
+$font-family-second: "DIN Pro", Arial, Helvetica, sans-serif;
+
+// colors
+
+$color-main: linear-gradient(91.63deg, #ed7979 22.25%, #f95d2c 70.77%);
+$color-second: rgb(77, 122, 189);
+$color-fluent: rgba(41, 23, 16, 0.7);
+$color-active: $color-main;
+$color-highlight: $color-main;
+$color-low-focus: #816e6e;
+
+// $color-background: red;
+$color-background: #94c8d8;
+$color-stroke: $color-second;
+$color-stroke-mainlike: $color-second;
+$color-font-light: $color-second;
+$color-font-headliner: red;
+
+$color-font-main: $color-second;
+$color-font-second: $color-second;
+$color-font-third: $color-second;
+
+// font size
+
+$font-size-main: 17px;
+
+// $font-size-extra-small: 16px;
+$font-size-small: 17px;
+$font-size-medium: 30px;
+// $font-size-big: 0px;
+// $font-size-extra-big: 0px;
+
+$font-headline: 90px;
+$font-sub-headline: 55px;
+
+// timings
+
+$animation-main: 1s;
+
+$animation-fast: 0.15s;
+$animation-medium: 0.75s;
+$animation-slow: 2s;
+
+// radius
+
+$border-radius-main: 10px;
+
+$border-radius-light: 5px;
+$border-radius-medium: 10px;
+$border-radius-hard: 30px;
+$border-radius-circle: 50%;
+$border-radius-modern: 100px;
+
+// breakpoints
+
+$breakpoint-xs: 395px;
+$breakpoint-ss: 495px;
+
+$breakpoint-s: 769px;
+$breakpoint-m: 1160px;
+$breakpoint-l: 1450px;
+$breakpoint-xl: 1700px;
+
+@media (max-width: $breakpoint-s) {
+}
+@media (min-width: $breakpoint-s) {
+}
+@media (max-width: $breakpoint-xl) {
+}

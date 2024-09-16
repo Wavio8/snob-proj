@@ -1,0 +1,35 @@
+.phone,
+.email {
+}
+
+.colorfull {
+  @include colorfull($color-main);
+}
+.headline {
+  @media (max-width: $breakpoint-m) {
+    text-align: center;
+  }
+}
+.tags {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  @media (max-width: $breakpoint-m) {
+    justify-content: flex-start;
+  }
+  .tag {
+    border-radius: $border-radius-modern;
+    border: 1px solid $color-second;
+    padding: 5px 18px 7px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    @media (max-width: $breakpoint-m) {
+      margin-right: 5px;
+    }
+    &.active {
+      background: $color-main;
+      border: 1px solid transparent;
+      color: $color-second;
+    }
+  }
+}

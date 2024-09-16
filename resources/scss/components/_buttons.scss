@@ -1,0 +1,50 @@
+.btn-main,
+.btn {
+  border: 1px solid #ed7979;
+  @include colorfull($color-main);
+  border-radius: $border-radius-main;
+  display: inline-flex;
+  text-decoration: none;
+  padding: 17px 35px;
+  font-weight: 600;
+  font-size: $font-size-main;
+  box-sizing: border-box;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  transition-duration: $animation-fast;
+  &:hover {
+    transform: scale(1.01);
+  }
+  &:active {
+    transform: scale(0.99);
+  }
+}
+.btn-fill {
+  background: $color-main;
+  color: $color-second;
+  -webkit-background-clip: border-box;
+  -webkit-text-fill-color: $color-second;
+  background-clip: border-box;
+  text-fill-color: $color-second;
+  border: none;
+}
+.btn-light-fill {
+  background: linear-gradient(91.63deg, rgba(#ed7979, 0.2) 22.25%, rgba(#f95d2c, 0.2) 70.77%);
+  border: none;
+
+  // @include colorfull($color-main);
+  font-family: $font-family-second;
+  font-size: 28px;
+  padding: 10px 30px;
+}
+.btn-main.btn-xl,
+.btn.btn-xl {
+  font-size: $font-size-small;
+  line-height: 150%;
+  &::after {
+    content: "";
+    width: 62px;
+    height: 62px;
+  }
+}

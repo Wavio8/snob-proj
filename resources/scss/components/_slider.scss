@@ -1,0 +1,35 @@
+._ms .splide__track {
+  border-radius: $border-radius-main;
+}
+.splide__arrows {
+  @media (max-width: $breakpoint-s) {
+    display: none;
+  }
+}
+
+$sliderArrowW: 32px;
+$sliderArrowH: 32px;
+.splide__arrow--prev,
+.splide__arrow--next {
+  background: none;
+  width: $sliderArrowW;
+  height: $sliderArrowH;
+  border: none;
+  position: absolute;
+  top: calc(100% / 2 - $sliderArrowH/ 2);
+  @include img-cover;
+  &:hover {
+    border: none;
+    background: none;
+    transform: none;
+    opacity: 1;
+  }
+}
+.splide__arrow--next {
+  right: calc(($sliderArrowW + 50px) * (-1));
+}
+
+.splide__arrow--prev {
+  transform: scale(-1, 1) !important;
+  left: calc(($sliderArrowW + 50px) * (-1));
+}

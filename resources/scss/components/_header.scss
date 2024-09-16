@@ -1,0 +1,47 @@
+.main-header {
+}
+
+.toup {
+  position: fixed;
+  right: 90px;
+  bottom: 100px;
+  z-index: 4;
+
+  width: 60px;
+  height: 60px;
+
+  background: $color-fluent;
+  border-radius: $border-radius-circle;
+
+  cursor: pointer;
+  opacity: 0;
+  transition-duration: 1s;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    left: calc(100% / 2 - 17px);
+    top: calc(100% / 2 - 2px);
+
+    width: 20px;
+    height: 2px;
+    border-radius: 4px;
+    background: $color-main;
+    transform: rotate(-45deg);
+  }
+  &::after {
+    transform: rotate(45deg);
+    left: calc(100% / 2 - 3px);
+  }
+  &.active {
+    opacity: 1;
+  }
+  &:hover {
+    background: $color-fluent;
+  }
+  @media (max-width: $breakpoint-m) {
+    right: calc(100% / 2 - 60px / 2);
+    bottom: 40px;
+  }
+}

@@ -1,0 +1,271 @@
+.burger {
+  position: fixed;
+  z-index: 300;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+}
+.burger__line{
+  position: absolute;
+}
+//.checkbox {
+//  position: absolute;
+//  display: block;
+//  height: 100%;
+//  width: 100%;
+//  top: 0;
+//  left: 0;
+//  z-index: 5;
+//  opacity: 0;
+//  cursor: pointer;
+//}
+
+@keyframes burgAnim1 {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    top: 50%;
+    left: 27%;
+    transform: rotate(45deg);
+  }
+}
+@keyframes burgAnim2 {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    top: 50%;
+    right: 27%;
+    bottom: auto;
+
+    transform: rotate(-45deg);
+  }
+}
+.burger__animation .burger__line-1 {
+
+  animation-name: burgAnim1;
+  animation-duration: 0.4s;
+  opacity: 0;
+}
+.burger__animation .burger__line-2 {
+
+  animation-name: burgAnim2;
+  animation-duration: 0.4s;
+  opacity: 0;
+}
+//  transform: rotate(45deg);
+//}
+//
+//input[type="checkbox"]:checked ~ .burger__line-2 {
+//  transform: rotate(-45deg);
+//}
+.burger__animation{}
+
+.burger__line-1{
+  @media screen and (max-width: 700px) {
+    width: 15px;
+  }
+  top: 38%;
+  left: 20%;
+  //transform-origin: 0% 0%;
+  transition: all 1s ease-in-out;
+}
+.burger__line-2{
+  @media screen and (max-width: 700px) {
+    width: 15px;
+  }
+  bottom: 38%;
+  right: 20%;
+  //transform-origin: 0% 100%;
+  transition: transform 1s ease-in-out;
+}
+.burger-block:hover{
+  .burger__line-1{
+    transform: translateX(40%);
+    transition: all 1s ease-in-out;
+  }
+  .burger__line-2{
+    transform: translateX(-40%);
+    transition: all 1s ease-in-out;
+  }
+}
+
+
+.burger-in-button {
+  @media screen and (max-width: 900px) {
+    margin-right: 38px;
+  }
+  @media screen and (max-width: 700px) {
+    width: 35px;
+    margin-top: 15px;
+    margin-right: 30px;
+  }
+  @media screen and (max-width: 600px) {
+    margin-right: 28px;
+  }
+  @media screen and (max-width: 500px) {
+    margin-right: 22px;
+  }
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  //width: 30px;
+  //height: 30px;
+  margin-top: 25px;
+  margin-right: 60px;
+}
+
+.burger-cont {
+  @media screen and (max-width: 1650px) {
+    padding: 40px 35px 40px 40px;
+  }
+  @media screen and (max-width: 1450px) {
+    width: 40%;
+  }
+  @media screen and (max-width: 1024px) {
+    width: 50%;
+  }
+  @media screen and (max-width: 900px) {
+    width: 60%;
+  }
+  @media screen and (max-width: 700px) {
+    width: 70%;
+    height: 95%;
+  }
+  @media screen and (max-width: 500px) {
+    width: 100%;
+    height: 95%;
+    padding: 45px 35px 40px 50px;
+  }
+  height: 92%;
+  width: 29%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 70px 70px 75px 70px;
+  border-radius: 20px;
+  background-color: rgba(40, 70, 130);
+}
+
+@keyframes fadeIn {
+  from {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  to {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+}
+@keyframes fadeRight {
+  from {
+    transform: translateX(120%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.nav_main-top-wrapper {
+  @media screen and (max-width: 900px) {
+    gap: 8px;
+  }
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hr1 {
+  @media screen and (max-width: 1650px) {
+    font-size: 33px;
+    line-height: 45px;
+  }
+  @media screen and (max-width: 900px) {
+    font-size: 25px;
+    line-height: 40px;
+  }
+  @media screen and (max-width: 500px) {
+    font-size: 20px;
+    line-height: 27px;
+  }
+  color: #ECEFF9;
+  opacity: 0.5;
+  font-family: "Unbounded", sans-serif;
+  font-size: 37px;
+  font-weight: 700;
+  line-height: 50px;
+  letter-spacing: -0.01em;
+  text-align: left;
+}
+
+.hr1:hover {
+  opacity: 1;
+  color: white;
+}
+
+.nav__mail {
+  @media screen and (max-width: 700px) {
+    font-size: 16px;
+  }
+  font-family: "Unbounded", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 0.04em;
+  text-align: left;
+  color: #7294EB;
+}
+.nav__mail:hover{
+  filter: brightness(150%);
+}
+
+//body.show-burger {
+//    overflow: hidden;
+//}
+
+.show-burger {
+  @media screen and (max-width: 900px) {
+    padding: 25px 38px 46px 40px;
+  }
+  @media screen and (max-width: 700px) {
+    padding: 20px 3% 23% 3%;
+  }
+
+  animation-name: fadeIn;
+  animation-duration: 1s;
+
+  //overflow: hidden;
+  display: flex;
+  padding: 25px 60px 46px 40px;
+  justify-content: flex-end;
+  align-items: flex-end;
+  .burger-cont{
+    animation-name: fadeRight;
+    animation-duration: 0.5s;
+  }
+
+  & > body {
+    overflow: hidden;
+  }
+}
+
+//.show-burger > body {
+//    overflow: hidden;
+//}
+.show-burger__body {
+  overflow: hidden;
+}
+
+
+//@media (max-width: 749px) {
+//  .show2 {
+//    display: block;
+//    font-size: 16px;
+//
+//    a {
+//      font-size: 16px;
+//    }
+//  }
+//}
